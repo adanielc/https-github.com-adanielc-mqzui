@@ -14,6 +14,7 @@
 		CFBAA3F92BADF2090049EB87 /* mquizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA3F82BADF2090049EB87 /* mquizTests.swift */; };
 		CFBAA4032BADF2090049EB87 /* mquizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA4022BADF2090049EB87 /* mquizUITests.swift */; };
 		CFBAA4052BADF2090049EB87 /* mquizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA4042BADF2090049EB87 /* mquizUITestsLaunchTests.swift */; };
+		CFBAA4122BADF2720049EB87 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA4112BADF2720049EB87 /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CFBAA3FE2BADF2090049EB87 /* mquizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mquizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBAA4022BADF2090049EB87 /* mquizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mquizUITests.swift; sourceTree = "<group>"; };
 		CFBAA4042BADF2090049EB87 /* mquizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mquizUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CFBAA4112BADF2720049EB87 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				CFBAA3E92BADF2070049EB87 /* ContentView.swift */,
 				CFBAA3EB2BADF2090049EB87 /* Assets.xcassets */,
 				CFBAA3ED2BADF2090049EB87 /* Preview Content */,
+				CFBAA4112BADF2720049EB87 /* QuestionView.swift */,
 			);
 			path = mquiz;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFBAA3EA2BADF2070049EB87 /* ContentView.swift in Sources */,
+				CFBAA4122BADF2720049EB87 /* QuestionView.swift in Sources */,
 				CFBAA3E82BADF2070049EB87 /* mquizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
