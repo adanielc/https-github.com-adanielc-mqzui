@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5405562BB60FCF004C49D3 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5405552BB60FCF004C49D3 /* QuizManager.swift */; };
+		CF8356B42BB6B9A600D76FB8 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = CF8356B32BB6B9A600D76FB8 /* Supabase */; };
+		CF8548FF2BB6E2EF00F2796F /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8548FE2BB6E2EF00F2796F /* ResultsView.swift */; };
+		CF8549012BB6E30E00F2796F /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8549002BB6E30E00F2796F /* StartView.swift */; };
 		CFBAA3E82BADF2070049EB87 /* mquizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA3E72BADF2070049EB87 /* mquizApp.swift */; };
 		CFBAA3EA2BADF2070049EB87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAA3E92BADF2070049EB87 /* ContentView.swift */; };
 		CFBAA3EC2BADF2090049EB87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBAA3EB2BADF2090049EB87 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF5405552BB60FCF004C49D3 /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
+		CF8356B52BB6C03B00D76FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF8548FE2BB6E2EF00F2796F /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		CF8549002BB6E30E00F2796F /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CFBAA3E42BADF2070049EB87 /* mquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBAA3E72BADF2070049EB87 /* mquizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mquizApp.swift; sourceTree = "<group>"; };
 		CFBAA3E92BADF2070049EB87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8356B42BB6B9A600D76FB8 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,11 +105,15 @@
 		CFBAA3E62BADF2070049EB87 /* mquiz */ = {
 			isa = PBXGroup;
 			children = (
+				CF8356B52BB6C03B00D76FB8 /* Info.plist */,
+				CF8548FE2BB6E2EF00F2796F /* ResultsView.swift */,
+				CF8549002BB6E30E00F2796F /* StartView.swift */,
 				CFBAA3E72BADF2070049EB87 /* mquizApp.swift */,
 				CFBAA3E92BADF2070049EB87 /* ContentView.swift */,
+				CFBAA4112BADF2720049EB87 /* QuestionView.swift */,
+				CF5405552BB60FCF004C49D3 /* QuizManager.swift */,
 				CFBAA3EB2BADF2090049EB87 /* Assets.xcassets */,
 				CFBAA3ED2BADF2090049EB87 /* Preview Content */,
-				CFBAA4112BADF2720049EB87 /* QuestionView.swift */,
 			);
 			path = mquiz;
 			sourceTree = "<group>";
@@ -146,6 +159,9 @@
 			dependencies = (
 			);
 			name = mquiz;
+			packageProductDependencies = (
+				CF8356B32BB6B9A600D76FB8 /* Supabase */,
+			);
 			productName = mquiz;
 			productReference = CFBAA3E42BADF2070049EB87 /* mquiz.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +234,9 @@
 				Base,
 			);
 			mainGroup = CFBAA3DB2BADF2070049EB87;
+			packageReferences = (
+				CF8356B22BB6B9A600D76FB8 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = CFBAA3E52BADF2070049EB87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,8 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5405562BB60FCF004C49D3 /* QuizManager.swift in Sources */,
 				CFBAA3EA2BADF2070049EB87 /* ContentView.swift in Sources */,
 				CFBAA4122BADF2720049EB87 /* QuestionView.swift in Sources */,
+				CF8549012BB6E30E00F2796F /* StartView.swift in Sources */,
+				CF8548FF2BB6E2EF00F2796F /* ResultsView.swift in Sources */,
 				CFBAA3E82BADF2070049EB87 /* mquizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +451,7 @@
 				DEVELOPMENT_TEAM = 43K477RYXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mquiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +481,7 @@
 				DEVELOPMENT_TEAM = 43K477RYXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mquiz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -592,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF8356B22BB6B9A600D76FB8 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF8356B32BB6B9A600D76FB8 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF8356B22BB6B9A600D76FB8 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFBAA3DC2BADF2070049EB87 /* Project object */;
 }

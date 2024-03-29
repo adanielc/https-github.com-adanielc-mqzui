@@ -7,48 +7,30 @@
 
 import SwiftUI
 
-class QuizManager: ObservableObject {
-    @Published var mockQuiestions = [
-        Question(title: "First question", answer: "A", options: ["A","B","C","D"]),
-        Question(title: "Second question", answer: "A", options: ["A","B","C","D"]),
-        Question(title: "Thrid question", answer: "A", options: ["A","B","C","D"]),
-        Question(title: "Fourth question", answer: "A", options: ["A","B","C","D"])
-    ]
-    func canSubmitQuiz() -> Bool {
-            return mockQuiestions.filter({$0.selection == nil}).isEmpty
-    }
-    func gradeQuiz() -> String {
-        var correct: CGFloat = 0
-        for question in mockQuiestions {
-            if question.answer == question.selection {
-                correct += 1
-            }
-        }
-        return "\((correct/CGFloat(mockQuiestions.count)) * 100) %"
-    }
-}
-
 struct ContentView: View {
     @StateObject var manager = QuizManager()
+    @State var showStart = false
+    @State var showResults = false
+    
     var body: some View {
         TabView {
-            ForEach(manager.mockQuiestions.indices, id:\.self) {
+            ForEach(manager.questions.indices, id:\.self) {
                 index in
                 VStack {
                     Spacer()
-                    QuestionView(question: $manager.mockQuiestions[index])
+                    QuestionView(question: $manager.questions[index])
                     Spacer()
-                    if let lastQuestion = manager.mockQuiestions.last, lastQuestion.id == manager.mockQuiestions[index].id {
+                    if let lastQuestion = manager.questions.last, lastQuestion.id == manager.questions[index].id {
                         Button {
-                            print(manager.canSubmitQuiz())
+                            print(manager.gradeQuiz())
                         } label: {
                             Text("submit")
                                 .padding()
                                 .foregroundColor(.white)
                                 .background(
                                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                .fill(Color("AppColor"))
-                                .frame(width: 300))
+                                        .fill(Color("AppColor"))
+                                        .frame(width: 300))
                         }
                         .buttonStyle(.plain)
                         .disabled(!manager.canSubmitQuiz())
@@ -57,6 +39,12 @@ struct ContentView: View {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
+        .fullScreenCover(isPresented: $showStart) {
+            
+        }
+        .fullScreenCover(isPresented: $showResults) {
+            
+        }
     }
 }
 

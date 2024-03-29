@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct Question: Identifiable {
-    let id = UUID()
+struct Question: Identifiable, Decodable {
+    let id: Int
+    let createdAt: String
     let title: String
     let answer: String
     let options: [String]
@@ -54,5 +55,5 @@ struct QuestionView: View {
 }
 
 #Preview {
-    QuestionView(question:.constant(Question(title: "In which year was the iPhone introduced?", answer: "2007", options: ["2006", "2007", "2008", "2009", "2010"])) )
+    QuestionView(question:.constant(Question(id: 1, createdAt: "created", title: "In which year was the iPhone introduced?", answer: "2007", options: ["2006", "2007", "2008", "2009", "2010"])) )
 }
